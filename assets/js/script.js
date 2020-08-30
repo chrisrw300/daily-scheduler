@@ -3,7 +3,17 @@ var currentTime = moment().format("h:mm:ss a");
 $("#currentDay").append(currentDay);
 $("#currentTime").append(currentTime);
 
+//when clicked, saves what is typed in textarea
+$(".saveBtn").on("click", function () {
+    //gets value and id of textarea & time
+    var scheduleText = $(this).siblings(".description").val();
+    var scheduleTime = $(this).parent().attr("id");
+    console.log(scheduleTime);
 
+    localStorage.setItem(scheduleTime, scheduleText);
+})
+
+//track real time vs scheudle time
 function timeTracker() {
     //get current number of hours.
     var realTime = moment().hour();
