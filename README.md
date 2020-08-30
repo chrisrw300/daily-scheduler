@@ -1,5 +1,4 @@
 # Daily Scheduler
----
 ### Description
 In this program, you can:
 - Write tasks within the timeframe of 9AM - 5PM
